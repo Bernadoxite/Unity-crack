@@ -57,9 +57,6 @@ public class VisualLegs : MonoBehaviour
     [Tooltip("Décalage de phase entre les jambes (PI = marche classique)")]
     public float phaseOffset = Mathf.PI;
 
-    Rigidbody2D rb;
-
-
     Vector2 leftRestPos;
     Vector2 rightRestPos;
     Quaternion leftRestRot;
@@ -69,8 +66,6 @@ public class VisualLegs : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>(); 
-        
         leftRestPos = leftLeg.localPosition;
         rightRestPos = rightLeg.localPosition;
 
@@ -80,12 +75,9 @@ public class VisualLegs : MonoBehaviour
 
     void Update()
     {
-        //float input = Mathf.Abs(Input.GetAxisRaw("Horizontal"));
+        float input = Mathf.Abs(Input.GetAxisRaw("Horizontal"));
 
-        float speed = Mathf.Abs(rb.velocity.x);
-
-
-        if (speed > 0.1f)
+        if (input > 0.1f)
         {
             time += Time.deltaTime * stepSpeed;
 

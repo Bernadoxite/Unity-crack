@@ -2546,7 +2546,7 @@ MonoBehaviour:
     m_Bits: 8
   maxDistance: 10
   gameManager: {fileID: 0}
-  playerInput: {fileID: 0}
+  playerInput: {fileID: -8369935978856692977}
   isFacingRight: 1
 --- !u!114 &5887442905628221551
 MonoBehaviour:
