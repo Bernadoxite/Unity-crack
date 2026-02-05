@@ -13,7 +13,13 @@ public class PlayerCombat : MonoBehaviour
 
     public GameManager gameManager; // savoir si round fini
 
-  
+    public ArmPunch armPunch;
+
+    public KetchupPunch ketchupPunch;
+
+
+
+
 
 
     void Awake()
@@ -30,6 +36,19 @@ public class PlayerCombat : MonoBehaviour
 
         // Bloque l'attaque si le joueur est stun
         if (health != null && health.IsHit()) return;
+
+        if (armPunch != null)
+        {
+            bool faceRight = GetComponent<PlayerController>().isFacingRight;
+            armPunch.Punch(faceRight);
+        }
+
+        if (ketchupPunch != null)
+        {
+            bool faceRight = GetComponent<PlayerController>().isFacingRight;
+            ketchupPunch.Punch(faceRight);
+        }
+
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer); // détecte ennemis dans la zone
 

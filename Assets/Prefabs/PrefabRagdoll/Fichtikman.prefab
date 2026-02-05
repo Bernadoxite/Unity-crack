@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9151884480582528200}
   - component: {fileID: 8960843955699402999}
   - component: {fileID: 897891391271100508}
+  - component: {fileID: 5107874126665347399}
   m_Layer: 9
   m_Name: Rouge
   m_TagString: Untagged
@@ -34,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3710143823606384789}
+  - {fileID: 7321966998866885276}
   m_Father: {fileID: 8828364978625286200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3522326840375967757
@@ -269,8 +271,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.09000003, y: 1.0000005}
+  m_Anchor: {x: 0, y: 0.00000047683716}
+  m_ConnectedAnchor: {x: -0.09000003, y: 0.99999905}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -278,8 +280,25 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -10
+    m_UpperAngle: 10
+--- !u!114 &5107874126665347399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410072154246819350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2311e5356ac0745beb6d211963cf7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KetchupPunch
+  layerRb: {fileID: 9151884480582528200}
+  jointTop: {fileID: 8138297733492271562}
+  jointBottom: {fileID: 897891391271100508}
+  moveDistance: 0.3
+  moveTime: 0.08
 --- !u!1 &1164410444310978425
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +572,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.13, y: -0.52999973}
+  m_ConnectedAnchor: {x: -0.13000011, y: -0.52999973}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -561,8 +580,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -10
+    m_UpperAngle: 10
 --- !u!233 &5024339600118303437
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -579,7 +598,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.14999998, y: 1.3599997}
+  m_ConnectedAnchor: {x: 0.14999986, y: 1.3599992}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -882,7 +901,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.09000003, y: 1.5100002}
+  m_ConnectedAnchor: {x: -0.09000003, y: 1.5100026}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -890,8 +909,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -10
+    m_UpperAngle: 10
 --- !u!1 &3260563646740735136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1212,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -3.61, y: -0.74000025}
+  m_ConnectedAnchor: {x: -3.61, y: -0.7400012}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1437,7 +1456,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 3.47, y: 0.17999983}
+  m_ConnectedAnchor: {x: 3.47, y: 0.17999887}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1551,6 +1570,7 @@ GameObject:
   - component: {fileID: 9207174168027398674}
   - component: {fileID: 5217825718651953702}
   - component: {fileID: 4652035011084336800}
+  - component: {fileID: 7805903253636730984}
   m_Layer: 9
   m_Name: Jaune
   m_TagString: Untagged
@@ -1829,7 +1849,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.059999943, y: -0.9500003}
+  m_ConnectedAnchor: {x: 0.06000012, y: -0.9500003}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1837,8 +1857,22 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -10
+    m_UpperAngle: 10
+--- !u!114 &7805903253636730984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821392148267415823}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b7da72c0020604992f415f63bd2154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmPunch
+  armRigidbody: {fileID: 9207174168027398674}
+  force: 5
 --- !u!1 &7174887948480802814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,12 +1988,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7357384248358630131}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.12, y: 3.71, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.34, y: -0.8399997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 16732311743721434}
+  m_Father: {fileID: 5245031023558906568}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7904094437127833345
 GameObject:
@@ -2239,7 +2273,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.85, y: 0.4500003}
+  m_ConnectedAnchor: {x: 0.8500001, y: 0.45000076}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2247,8 +2281,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -10
+    m_UpperAngle: 10
 --- !u!1 &8541429038965200212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,14 +2316,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.87844, y: 4.6302, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 882753731324808450}
   - {fileID: 8828364978625286200}
   - {fileID: 8528086399331319984}
   - {fileID: 4283969534866957374}
-  - {fileID: 7321966998866885276}
   - {fileID: 5225371496945186112}
   - {fileID: 9072260655075028696}
   m_Father: {fileID: 0}
@@ -2521,11 +2554,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   damage: 10
   attackPoint: {fileID: 7321966998866885276}
-  attackRange: 5
+  attackRange: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
   gameManager: {fileID: 0}
+  armPunch: {fileID: 7805903253636730984}
+  ketchupPunch: {fileID: 5107874126665347399}
 --- !u!114 &2529580475566337827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2538,8 +2573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b25fd9119846640b25ca3d07c55504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
-  jumpForce: 30
+  speed: 3
+  jumpForce: 50
   groundCheck: {fileID: 5225371496945186112}
   groundLayer:
     serializedVersion: 2

@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     public bool isFacingRight = true;
 
+    private float baseScaleX;
+
+
 
 
 
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<PlayerHealth>();
         playerInput = GetComponent<PlayerInput>();
+
+        baseScaleX = transform.localScale.x;
     }
 
     void Update()
@@ -68,8 +73,9 @@ public class PlayerController : MonoBehaviour
             isFacingRight = false;
         }
         Vector3 scale = transform.localScale;
-        scale.x = isFacingRight ? 1 : -1;
+        scale.x = isFacingRight ? baseScaleX : -baseScaleX;
         transform.localScale = scale;
+
 
 
         if (health != null && health.IsHit())
