@@ -1,45 +1,57 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class KetchupPunch : MonoBehaviour
 {
-    
-    public Rigidbody2D layerRb;
-    public Joint2D jointTop;
-    public Joint2D jointBottom;
+    public GameObject visualPart;      // La partie du corps à cacher
+    public GameObject clonePrefab;     // Le clone qui va bouger
+    public float speed = 8f;
 
-    public float moveDistance = 0.3f;
-    public float moveTime = 0.08f;
-
-    private Vector2 startPosition;
     public void Punch(bool faceRight)
     {
-        StartCoroutine(PunchRoutine(faceRight));
+        StartCoroutine(PunchEffect(faceRight));
     }
 
-    IEnumerator PunchRoutine(bool faceRight)
+    IEnumerator PunchEffect(bool faceRight)
     {
-        Vector2 dir = faceRight ? Vector2.right : Vector2.left;
+        // On cache la partie originale
+        visualPart.GetComponent<SpriteRenderer>().enabled = false;
 
-        //   mémorise la position
-        Vector2 startPos = layerRb.position;
+        //  On crée le clone au même endroit
+        GameObject clone = Instantiate(clonePrefab, visualPart.transform.position, Quaternion.identity);
 
-        //  libère la tranche
-        jointTop.enabled = false;
-        jointBottom.enabled = false;
+        float time = 0f;
 
-        //  avance
-        layerRb.MovePosition(startPos + dir * moveDistance);
+        //  Aller
+        while (time < 0.1f)
+        {
+            if (faceRight)
+                clone.transform.Translate(Vector2.right * speed * Time.deltaTime);
+            else
+                clone.transform.Translate(Vector2.left * speed * Time.deltaTime);
 
-        //  pause
-        yield return new WaitForSeconds(0.08f);
+            time += Time.deltaTime;
+            yield return null;
+        }
 
-        //  revient
-        layerRb.MovePosition(startPos);
+        // Retour
+        time = 0f;
+        while (time < 0.1f)
+        {
+            if (faceRight)
+                clone.transform.Translate(Vector2.left * speed * Time.deltaTime);
+            else
+                clone.transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        //  rattache
-        jointTop.enabled = true;
-        jointBottom.enabled = true;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        //  On supprime le clone
+        Destroy(clone);
+
+        // 6On réaffiche la partie originale
+        visualPart.GetComponent<SpriteRenderer>().enabled = true;
     }
-
 }
+
