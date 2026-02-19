@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -271,7 +271,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.00000047683716}
-  m_ConnectedAnchor: {x: -0.2200001, y: 1.0000001}
+  m_ConnectedAnchor: {x: -0.22, y: 0.99999976}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -279,8 +279,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!114 &5107874126665347399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +308,6 @@ GameObject:
   - component: {fileID: 7214866162893685670}
   - component: {fileID: 3722834089264782718}
   - component: {fileID: 6792928806627877407}
-  - component: {fileID: 3861111196902861708}
   - component: {fileID: 5024339600118303437}
   m_Layer: 9
   m_Name: Brun
@@ -325,13 +324,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164410444310978425}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.81, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.018085083, w: 0.9998365}
+  m_LocalPosition: {x: 0.99999994, y: 1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 16732311743721434}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.073}
 --- !u!212 &7214866162893685670
 SpriteRenderer:
   serializedVersion: 2
@@ -403,7 +402,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -428,7 +427,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4de4a09c7b5bdf4419349c526877c45b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -553,32 +552,6 @@ PolygonCollider2D:
       - {x: 0.645, y: -0.745}
       - {x: 0.885, y: -0.765}
   m_UseDelaunayMesh: 1
---- !u!233 &3861111196902861708
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164410444310978425}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 9207174168027398674}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.22050285, y: -0.48467276}
-  m_UseConnectedAnchor: 1
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 1
-  m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
 --- !u!233 &5024339600118303437
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -595,7 +568,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.1499998, y: -0.23999834}
-  m_ConnectedAnchor: {x: 0, y: 1.1199999}
+  m_ConnectedAnchor: {x: 0.008777678, y: 1.1147332}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -897,8 +870,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.3681336, y: 0.0000009536743}
-  m_ConnectedAnchor: {x: -0.45813367, y: 1.5099995}
+  m_Anchor: {x: 0.0000014385504, y: -0.000008700092}
+  m_ConnectedAnchor: {x: -0.089998364, y: 1.50999}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -906,8 +879,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &3260563646740735136
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &231762611171407225
 Transform:
   m_ObjectHideFlags: 0
@@ -1068,7 +1041,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -1208,8 +1181,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -3.6099997, y: -0.73999953}
+  m_Anchor: {x: 0.84000057, y: 0.73997945}
+  m_ConnectedAnchor: {x: -2.7699988, y: -0.000021122396}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1217,8 +1190,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -30
+    m_UpperAngle: 30
 --- !u!1 &3923155192923028273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,7 +1211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4613554746722121215
 Transform:
   m_ObjectHideFlags: 0
@@ -1325,7 +1298,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -1452,8 +1425,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 3.47, y: 0.17999896}
+  m_Anchor: {x: -0.7000002, y: -0.17999882}
+  m_ConnectedAnchor: {x: 2.7699997, y: -0.0000003259629}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1461,8 +1434,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -20
-    m_UpperAngle: 20
+    m_LowerAngle: -30
+    m_UpperAngle: 30
 --- !u!1 &4927362604207016451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,13 +1813,13 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 2824634281765748071}
+  m_ConnectedRigidBody: {fileID: 3722834089264782718}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.000000059604645, y: 0}
-  m_ConnectedAnchor: {x: 0.059999898, y: -0.9500001}
+  m_ConnectedAnchor: {x: 0.02836846, y: 0.79946285}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1854,8 +1827,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!114 &7805903253636730984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2123,7 +2096,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4de4a09c7b5bdf4419349c526877c45b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2269,8 +2242,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.8500001, y: 0.45000076}
+  m_Anchor: {x: 0.05797392, y: 0.3768282}
+  m_ConnectedAnchor: {x: 0.90797395, y: 0.8268285}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2278,8 +2251,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &8541429038965200212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2384,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-8369935978856692977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2607,6 +2580,7 @@ GameObject:
   - component: {fileID: 2406385801187391496}
   - component: {fileID: 2824634281765748071}
   - component: {fileID: 7060939736157768264}
+  - component: {fileID: 3335876870129967528}
   m_Layer: 9
   m_Name: Vert
   m_TagString: Untagged
@@ -2622,8 +2596,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8554231972480189092}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.027846323, w: 0.9996122}
-  m_LocalPosition: {x: 0.79980195, y: 3.2580638, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.028606355, w: 0.99959075}
+  m_LocalPosition: {x: 0.67, y: 3.5260963, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2632,7 +2606,7 @@ Transform:
   - {fileID: 5245031023558906568}
   - {fileID: 523191704997235470}
   m_Father: {fileID: 16732311743721434}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.278}
 --- !u!212 &2406385801187391496
 SpriteRenderer:
   serializedVersion: 2
@@ -2704,7 +2678,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -2729,7 +2703,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4de4a09c7b5bdf4419349c526877c45b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2846,6 +2820,32 @@ PolygonCollider2D:
       - {x: 1.29, y: -0.525}
       - {x: 2.1499999, y: -0.525}
   m_UseDelaunayMesh: 1
+--- !u!233 &3335876870129967528
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554231972480189092}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 9207174168027398674}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -0.05999987, y: 0.95000005}
+  m_UseConnectedAnchor: 1
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 1
+  m_AngleLimits:
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1001 &8655941671984325064
 PrefabInstance:
   m_ObjectHideFlags: 0

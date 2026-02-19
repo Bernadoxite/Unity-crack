@@ -17,4 +17,4 @@ MonoBehaviour:
   attackDamage: 10
   speed: 5
   jumpForce: 7
-  characterPrefab: {fileID: 6346400949140494597, guid: ec29fed07314e8b48ae2e5175c0a05e0, type: 3}
+  characterPrefab: {fileID: 1485964810727555198, guid: 909f20ad3cc78b6499f76ef4c27695fd, type: 3}
