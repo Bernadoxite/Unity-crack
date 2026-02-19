@@ -64,17 +64,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (moveInput.x > 0.01f)
-        {
-            isFacingRight = true;
-        }
-        else if (moveInput.x < -0.01f)
-        {
-            isFacingRight = false;
-        }
-        Vector3 scale = transform.localScale;
-        scale.x = isFacingRight ? baseScaleX : -baseScaleX;
-        transform.localScale = scale;
+        //if (moveInput.x > 0.01f)
+        //{
+        //    isFacingRight = true;
+        //}
+        //else if (moveInput.x < -0.01f)
+        //{
+        //    isFacingRight = false;
+        //}
+        //Vector3 scale = transform.localScale;
+        //scale.x = isFacingRight ? baseScaleX : -baseScaleX;
+        //transform.localScale = scale;
 
 
 
