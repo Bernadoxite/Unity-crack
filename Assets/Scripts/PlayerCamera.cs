@@ -12,9 +12,9 @@ public class PlayerCamera : MonoBehaviour
 
         // Point médian entre les deux joueurs
         float midX = (player1.position.x + player2.position.x) / 2f;
-        float midY = (player1.position.y + player2.position.y) / 2f; //  pas de mid vertical ici?? Sauf si mega jump ??
+        float Y = 2; //  pas de mid vertical ici?? Sauf si mega jump ??
 
-        Vector3 targetPosition = new Vector3(midX, midY, transform.position.z); // pareil ici midy utile?
+        Vector3 targetPosition = new Vector3(midX, Y, transform.position.z); // pareil ici midy utile?
 
         // Déplacement fluide
         transform.position = Vector3.Lerp(transform.position, targetPosition, smoothSpeed * Time.deltaTime);
