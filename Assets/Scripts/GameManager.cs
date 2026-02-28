@@ -135,8 +135,11 @@ public class GameManager : MonoBehaviour
             PlayerInput input2 = p2.GetComponent<PlayerInput>();
             input2.SwitchCurrentActionMap("Player2");
 
-            // EVENTS
-            player1.OnKO += OnPlayerKO;
+        p1.GetComponent<PlayerController>().opponent = p2.transform;
+        p2.GetComponent<PlayerController>().opponent = p1.transform;
+
+        // EVENTS
+        player1.OnKO += OnPlayerKO;
             player2.OnKO += OnPlayerKO;
 
             // CAMERA

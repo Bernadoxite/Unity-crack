@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
     private float baseScaleX;
 
+    public Transform opponent;
+
 
 
 
@@ -59,22 +61,23 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded && (health == null || !health.IsHit()))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            Debug.Log("jumping");
         }
     }
 
     void FixedUpdate()
     {
-        //if (moveInput.x > 0.01f)
-        //{
-        //    isFacingRight = true;
-        //}
-        //else if (moveInput.x < -0.01f)
-        //{
-        //    isFacingRight = false;
-        //}
-        //Vector3 scale = transform.localScale;
-        //scale.x = isFacingRight ? baseScaleX : -baseScaleX;
-        //transform.localScale = scale;
+        if (opponent.position.x > transform.position.x)
+        {
+            isFacingRight = true;
+        }
+        else 
+        {
+            isFacingRight = false;
+        }
+        Vector3 scale = transform.localScale;
+        scale.x = isFacingRight ? baseScaleX : -baseScaleX;
+        transform.localScale = scale;
 
 
 
@@ -90,26 +93,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-            //float targetVelocityX = moveInput.x * speed;
-
-            //if (otherPlayer != null)
-            //{
-            //    float distance = otherPlayer.position.x - transform.position.x;
-
-            //    // On bloque la vitesse si on dépasse maxDistance
-            //    if (distance > maxDistance && moveInput.x > 0) targetVelocityX = 0;
-            //    if (distance < -maxDistance && moveInput.x < 0) targetVelocityX = 0;
-
-            //    // On calcule la position future et on clamp si besoin
-            //    float nextPosX = transform.position.x + targetVelocityX * Time.fixedDeltaTime;
-            //    float minX = otherPlayer.position.x - maxDistance;
-            //    float maxX = otherPlayer.position.x + maxDistance;
-            //    nextPosX = Mathf.Clamp(nextPosX, minX, maxX);
-
-            //    targetVelocityX = (nextPosX - transform.position.x) / Time.fixedDeltaTime;
-            //}
-
-            //rb.velocity = new Vector2(targetVelocityX, rb.velocity.y);
+         
 
             rb.velocity = new Vector2(moveInput.x * speed, rb.velocity.y);
     }
