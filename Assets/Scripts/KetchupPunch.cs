@@ -50,7 +50,7 @@ public class KetchupPunch : MonoBehaviour
         //  On supprime le clone
         Destroy(clone);
 
-        // 6On réaffiche la partie originale
+        // On réaffiche la partie originale
         visualPart.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

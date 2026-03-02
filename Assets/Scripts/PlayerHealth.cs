@@ -9,9 +9,13 @@ public class PlayerHealth : MonoBehaviour
     public float hitStunDuration = 0.2f;
     private bool isHit = false;
 
-    private HealthBar healthBar; 
+    private HealthBar healthBar;
 
     public System.Action<PlayerHealth> OnKO; // event qui prévient quand le joueur est KO
+
+    private SpriteRenderer[] spriteRenderers;
+    public Color hurtColor = Color.red;
+    
 
     void Awake()
     {
@@ -24,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
         {
             healthBar.SetMaxHealth(maxHealth);
         }
+
+        spriteRenderers= GetComponentsInChildren<SpriteRenderer>();
     }
 
 
@@ -62,7 +68,15 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator HitStun()
     {
         isHit = true;
-        yield return new WaitForSeconds(hitStunDuration);
+        foreach (SpriteRenderer sprite in spriteRenderers)
+        {
+            
+            sprite.color = hurtColor; // Change to red
+            yield return new WaitForSeconds(hitStunDuration);
+            
+        }
+            
+        
         isHit = false;
     }
 

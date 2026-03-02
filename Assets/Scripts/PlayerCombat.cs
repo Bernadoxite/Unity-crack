@@ -19,9 +19,6 @@ public class PlayerCombat : MonoBehaviour
 
 
 
-
-
-
     void Awake()
     {
         health = GetComponent<PlayerHealth>();
@@ -31,6 +28,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
+        Debug.Log("attque");
         if (!context.performed) return;
         if (gameManager != null && !gameManager.isRoundActive) return;//bloque attaque si round fini
 
